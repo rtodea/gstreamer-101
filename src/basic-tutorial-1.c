@@ -35,6 +35,9 @@ tutorial_main (int argc, char *argv[])
             "environment variable set for more details.\n");
     }
 
+    /* Take a snapshot of the pipeline */
+    GST_DEBUG_BIN_TO_DOT_FILE(GST_BIN(pipeline), GST_DEBUG_GRAPH_SHOW_ALL, "pipeline_snapshot");
+
     /* Free resources */
     gst_message_unref (msg);
     gst_object_unref (bus);

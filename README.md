@@ -23,6 +23,11 @@ export XDG_RUNTIME_DIR=/run/user/$(id -u)
 ./dist/basic-tutorial-2
 ```
 
+```bash
+export XDG_RUNTIME_DIR=/run/user/$(id -u)
+./dist/basic-tutorial-1
+```
+
 ## Passing sound to Docker
 
 From [this article](https://prateeksrivastav598.medium.com/playing-sound-in-docker-containers-a-step-by-step-guide-f7a06e246a35):
