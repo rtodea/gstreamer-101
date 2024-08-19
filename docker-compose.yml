@@ -14,3 +14,5 @@ services:
     privileged: true
     volumes:
       - .:/app
+    devices:
+      - /dev/snd:/dev/snd

@@ -22,3 +22,11 @@ gcc src/basic-tutorial-2.c -o dist/basic-tutorial-2 `pkg-config --cflags --libs 
 export XDG_RUNTIME_DIR=/run/user/$(id -u)
 ./dist/basic-tutorial-2
 ```
+
+## Passing sound to Docker
+
+From [this article](https://prateeksrivastav598.medium.com/playing-sound-in-docker-containers-a-step-by-step-guide-f7a06e246a35):
+
+```bash
+docker run --rm -it --privileged=true --device=/dev/snd:/dev/snd audio-container:v1
+```
