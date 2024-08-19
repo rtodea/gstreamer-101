@@ -40,3 +40,10 @@ wget https://file-examples.com/storage/fe7f535b0666c2bb496169e/2017/11/file_exam
 ```bash
 mpg123 file_example_MP3_700KB.mp3
 ```
+
+Error on Windows:
+
+```txt
+[src/libout123/modules/portaudio.c:120] error: Failed to open PortAudio default stream: Device unavailable
+main: [src/mpg123.c:313] error: out123 error 7: failed to open device
+```
