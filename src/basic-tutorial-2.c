@@ -78,6 +78,9 @@ tutorial_main (int argc, char *argv[])
     gst_message_unref (msg);
   }
 
+  /* Save pipeline to dot file */
+  GST_DEBUG_BIN_TO_DOT_FILE(GST_BIN(pipeline), GST_DEBUG_GRAPH_SHOW_ALL, "pipeline.dot");
+
   /* Free resources */
   gst_object_unref (bus);
   gst_element_set_state (pipeline, GST_STATE_NULL);
