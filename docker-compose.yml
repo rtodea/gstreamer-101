@@ -11,8 +11,8 @@ services:
     command: /bin/bash
     tty: true
     stdin_open: true
-    privileged: true
     volumes:
       - .:/app
+    privileged: true
     devices:
       - /dev/snd:/dev/snd
