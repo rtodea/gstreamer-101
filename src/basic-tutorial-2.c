@@ -1,4 +1,5 @@
 #include <gst/gst.h>
+#include <stdio.h>
 
 #ifdef __APPLE__
 #include <TargetConditionals.h>
@@ -89,8 +90,14 @@ tutorial_main (int argc, char *argv[])
 }
 
 int
-main (int argc, char *argv[])
+main (int argc, char *argv[], char *envp[])
 {
+    int i = 0;
+    while (envp[i] != NULL) {
+        printf("%s\n", envp[i]);
+        i++;
+    }
+  
 #if defined(__APPLE__) && TARGET_OS_MAC && !TARGET_OS_IPHONE
   return gst_macos_main ((GstMainFunc) tutorial_main, argc, argv, NULL);
 #else
