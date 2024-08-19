@@ -30,3 +30,13 @@ From [this article](https://prateeksrivastav598.medium.com/playing-sound-in-dock
 ```bash
 docker run --rm -it --privileged=true --device=/dev/snd:/dev/snd audio-container:v1
 ```
+
+Sample `MP3` file:
+
+```bash
+wget https://file-examples.com/storage/fe7f535b0666c2bb496169e/2017/11/file_example_MP3_700KB.mp3
+```
+
+```bash
+mpg123 file_example_MP3_700KB.mp3
+```
