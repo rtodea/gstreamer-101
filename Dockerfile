@@ -66,3 +66,7 @@ RUN apt-get install -y rsync
 # Copy entrypoint.sh and other scripts
 COPY ./docker/entrypoint.sh entrypoint.sh
 COPY ./docker/scripts /root/scripts
+
+RUN apt-get install -y alsa-utils
+RUN apt-get install -y vlc-bin
+RUN apt-get install -y mpg123
