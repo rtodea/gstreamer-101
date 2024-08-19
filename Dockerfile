@@ -70,3 +70,4 @@ COPY ./docker/scripts /root/scripts
 RUN apt-get install -y alsa-utils
 RUN apt-get install -y vlc-bin
 RUN apt-get install -y mpg123
+RUN apt-get install -y pulseaudio

@@ -47,3 +47,7 @@ Error on Windows:
 [src/libout123/modules/portaudio.c:120] error: Failed to open PortAudio default stream: Device unavailable
 main: [src/mpg123.c:313] error: out123 error 7: failed to open device
 ```
+
+Some other references:
+
+1. https://stackoverflow.com/questions/28985714/run-apps-using-audio-in-a-docker-container?rq=3
