@@ -4,3 +4,13 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
+  debug:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    command: /bin/bash
+    tty: true
+    stdin_open: true
+    privileged: true
+    volumes:
+      - .:/app
