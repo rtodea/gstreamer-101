@@ -18,3 +18,4 @@ services:
     environment:
       - GST_DEBUG_DUMP_DOT_DIR=/app
       - XDG_RUNTIME_DIR=/run/user/0
+      - GST_DEBUG=3
