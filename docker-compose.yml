@@ -16,6 +16,6 @@ services:
     devices:
       - /dev/snd:/dev/snd
     environment:
-      - GST_DEBUG_DUMP_DOT_DIR=/app
+      - GST_DEBUG_DUMP_DOT_DIR=/tmp/gstreamer-101
       - XDG_RUNTIME_DIR=/run/user/0
       - GST_DEBUG=3
