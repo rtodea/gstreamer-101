@@ -15,3 +15,6 @@ services:
     privileged: true
     devices:
       - /dev/snd:/dev/snd
+    environment:
+      - GST_DEBUG_DUMP_DOT_DIR=.
+      - XDG_RUNTIME_DIR=/run/user/0

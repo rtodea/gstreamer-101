@@ -16,12 +16,16 @@ tutorial_main (int argc, char *argv[])
     gst_init (&argc, &argv);
 
     /* Build the pipeline */
-    pipeline =
-        gst_parse_launch
-        ("playbin uri=https://gstreamer.freedesktop.org/data/media/sintel_trailer-480p.webm",
-        NULL);
 
     /* Start playing */
+    pipeline =
+        gst_parse_launch
+        // ("playbin uri=https://gstreamer.freedesktop.org/data/media/sintel_trailer-480p.webm",
+         ("playbin uri=https://download.samplelib.com/webm/sample-5s.webm",
+             NULL);
+
+    /* Take a snapshot of the pipeline */
+    GST_DEBUG_BIN_TO_DOT_FILE(GST_BIN(pipeline), GST_DEBUG_GRAPH_SHOW_ALL, "pipeline_snapshot");
     gst_element_set_state (pipeline, GST_STATE_PLAYING);
 
     /* Wait until error or EOS */
@@ -36,8 +40,7 @@ tutorial_main (int argc, char *argv[])
             "environment variable set for more details.\n");
     }
 
-    /* Take a snapshot of the pipeline */
-    GST_DEBUG_BIN_TO_DOT_FILE(GST_BIN(pipeline), GST_DEBUG_GRAPH_SHOW_ALL, "pipeline_snapshot");
+
 
     /* Free resources */
     gst_message_unref (msg);
