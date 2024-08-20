@@ -21,7 +21,15 @@ if (GStreamer_FOUND)
 endif ()
 include_directories(
         ${GLIB2_INCLUDE_DIRS}
-#        /usr/lib/x86_64-linux-gnu/glib-2.0/include
-#        /usr/lib/x86_64-linux-gnu/gstreamer-1.0/include
-#        /usr/include/gstreamer-1.0
+        /usr/lib/x86_64-linux-gnu/glib-2.0/include
+        /usr/lib/x86_64-linux-gnu/gstreamer-1.0/include
+        /usr/include/gstreamer-1.0
 )
+
+link_directories(
+        /usr/include/gstreamer-1.0/gst)
+
+add_executable(basic-tutorial-c src/basic-tutorial-1.c)
+target_link_libraries(basic-tutorial-c PUBLIC
+        ${GSTREAMER_LIBRARIES}
+        ${GLIB2_LIBRARIES})
