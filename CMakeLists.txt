@@ -29,7 +29,7 @@ include_directories(
 link_directories(
         /usr/include/gstreamer-1.0/gst)
 
-add_executable(basic-tutorial-c src/basic-tutorial-1.c)
-target_link_libraries(basic-tutorial-c PUBLIC
+add_executable(basic-tutorial-1 src/basic-tutorial-1.c)
+target_link_libraries(basic-tutorial-1 PUBLIC
         ${GSTREAMER_LIBRARIES}
         ${GLIB2_LIBRARIES})
