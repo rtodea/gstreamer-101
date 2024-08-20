@@ -32,4 +32,5 @@ link_directories(
 add_executable(basic-tutorial-1 src/basic-tutorial-1.c)
 target_link_libraries(basic-tutorial-1 PUBLIC
         ${GSTREAMER_LIBRARIES}
-        ${GLIB2_LIBRARIES})
+        ${GLIB2_LIBRARIES}
+        gobject-2.0)
