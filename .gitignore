@@ -1,4 +1,5 @@
 .idea
 dist
 cmake-*
+!cmake-modules
 *.mp3
