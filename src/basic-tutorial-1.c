@@ -1,3 +1,4 @@
+#include <stdio.h>
 #include <gst/gst.h>
 
 #ifdef __APPLE__
@@ -49,6 +50,7 @@ tutorial_main (int argc, char *argv[])
 int
 main (int argc, char *argv[])
 {
+    printf("hello world\n");
 #if defined(__APPLE__) && TARGET_OS_MAC && !TARGET_OS_IPHONE
     return gst_macos_main ((GstMainFunc) tutorial_main, argc, argv, NULL);
 #else
