@@ -19,4 +19,9 @@ pkg_check_modules(GLIB2 glib-2.0 REQUIRED)
 if (GStreamer_FOUND)
     message(STATUS "FOUND!!")
 endif ()
-message(${GSTREAMER_INCLUDE_DIRS})
+include_directories(
+        ${GLIB2_INCLUDE_DIRS}
+#        /usr/lib/x86_64-linux-gnu/glib-2.0/include
+#        /usr/lib/x86_64-linux-gnu/gstreamer-1.0/include
+#        /usr/include/gstreamer-1.0
+)
